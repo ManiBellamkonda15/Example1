@@ -14,9 +14,9 @@
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		
-		<mapping class="com.infotech.entities.Employee"/>
-		<mapping class="com.infotech.entities.Address"/>
+		
 		<mapping class="com.infotech.entities.Device"/>
 		<mapping class="com.infotech.entities.Room"/>
+		<mapping class="com.infotech.entities.Property"/>
 	</session-factory>
 </hibernate-configuration>

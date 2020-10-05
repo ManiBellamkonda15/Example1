@@ -10,6 +10,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -26,7 +27,10 @@ public class Device {
 	@Column(name = "display_name")
 	private String dispalyName;
 	@ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	//@ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@JoinColumn(name = "ROOM_ID")
 	//private List<Room> roomList = new ArrayList<>();
+	
 	private Room roomList; 
 	public int getDeviceId() {
 		return deviceId;
@@ -52,6 +56,8 @@ public class Device {
 	public void setRoomList(Room roomList) {
 		this.roomList = roomList;
 	}
+	
+	
 	
 	
 
